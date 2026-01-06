@@ -44,7 +44,7 @@ Load the bundle directly with Amplifier:
 
 ```bash
 # Load from git URL
-amplifier bundle use git+https://github.com/robotdad/amplifier-bundle-lsp-typescript@main
+amplifier bundle use git+https://github.com/microsoft/amplifier-bundle-lsp-typescript@main
 ```
 
 ### Including in Another Bundle
@@ -53,7 +53,7 @@ Add to your bundle's `includes:` section:
 
 ```yaml
 includes:
-  - bundle: git+https://github.com/robotdad/amplifier-bundle-lsp-typescript@main
+  - bundle: git+https://github.com/microsoft/amplifier-bundle-lsp-typescript@main
 ```
 
 ## Quick Start
@@ -288,7 +288,7 @@ bundle:
 
 includes:
   - bundle: git+https://github.com/microsoft/amplifier-foundation@main
-  - bundle: git+https://github.com/robotdad/amplifier-bundle-lsp-typescript@main
+  - bundle: git+https://github.com/microsoft/amplifier-bundle-lsp-typescript@main
 
 default_behavior: foundation
 ```
