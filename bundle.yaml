@@ -1,12 +1,20 @@
-# TypeScript/JavaScript LSP Bundle
-# Provides TypeScript and JavaScript language support for code intelligence via LSP.
-# The typescript-lsp behavior includes lsp-core which provides the tool-lsp module.
-
 bundle:
   name: lsp-typescript
-  version: 0.1.0
-  description: TypeScript/JavaScript LSP support via typescript-language-server
+  version: 2.0.0
+  description: "DEPRECATED: Consolidated into typescript-dev. This bundle forwards automatically."
 
-# Include only the typescript-lsp behavior - it already includes lsp-core internally
 includes:
-  - bundle: lsp-typescript:behaviors/typescript-lsp
+  - bundle: git+https://github.com/microsoft/amplifier-bundle-typescript-dev@main
+
+hooks:
+  - module: hooks-deprecation
+    source: git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=modules/hooks-deprecation
+    config:
+      bundle_name: lsp-typescript
+      replacement: amplifier-bundle-typescript-dev
+      message: "amplifier-bundle-lsp-typescript has been consolidated into amplifier-bundle-typescript-dev"
+      migration: |
+        Update your includes:
+        -   - bundle: git+https://github.com/microsoft/amplifier-bundle-lsp-typescript@main
+        +   - bundle: git+https://github.com/microsoft/amplifier-bundle-typescript-dev@main
+      severity: warning
