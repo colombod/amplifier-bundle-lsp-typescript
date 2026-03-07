@@ -1,20 +1,20 @@
 bundle:
   name: lsp-typescript
-  version: 2.0.0
-  description: "DEPRECATED: Consolidated into typescript-dev. This bundle forwards automatically."
+  version: 2.1.0
+  description: "DEPRECATED: Consolidated into ts-dev. This bundle forwards automatically."
 
 includes:
-  - bundle: git+https://github.com/microsoft/amplifier-bundle-typescript-dev@main
+  - bundle: git+https://github.com/microsoft/amplifier-bundle-ts-dev@main
 
 hooks:
   - module: hooks-deprecation
     source: git+https://github.com/microsoft/amplifier-foundation@main#subdirectory=modules/hooks-deprecation
     config:
       bundle_name: lsp-typescript
-      replacement: amplifier-bundle-typescript-dev
-      message: "amplifier-bundle-lsp-typescript has been consolidated into amplifier-bundle-typescript-dev"
+      replacement: amplifier-bundle-ts-dev
+      message: "amplifier-bundle-lsp-typescript has been consolidated into amplifier-bundle-ts-dev"
       migration: |
         Update your includes:
         -   - bundle: git+https://github.com/microsoft/amplifier-bundle-lsp-typescript@main
-        +   - bundle: git+https://github.com/microsoft/amplifier-bundle-typescript-dev@main
+        +   - bundle: git+https://github.com/microsoft/amplifier-bundle-ts-dev@main
       severity: warning
