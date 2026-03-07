@@ -1,10 +1,7 @@
 bundle:
   name: lsp-typescript
-  version: 2.1.0
-  description: "DEPRECATED: Consolidated into ts-dev. This bundle forwards automatically."
-
-includes:
-  - bundle: git+https://github.com/microsoft/amplifier-bundle-ts-dev@main
+  version: 2.2.0
+  description: "DEPRECATED: Consolidated into ts-dev. Update your includes to use amplifier-bundle-ts-dev."
 
 hooks:
   - module: hooks-deprecation
